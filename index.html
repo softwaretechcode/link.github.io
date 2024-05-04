@@ -17,7 +17,34 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <title>Welcome To SoftwareTechIT.com Here You Can Find Links Related To The Website & Company SoftwareTechIT, Blog, Tech, Coding,Tutorials, Videos, Products, And More</title>
 </head>
+<style>
+    @keyframes reveal {
+  from { opacity: 0; clip-path: inset(0% 60% 0% 50%); }
+  to { opacity: 1; clip-path: inset(0% 0% 0% 0%); }
+}
 
+img {
+  animation: auto linear reveal both;
+  animation-timeline: view();
+  animation-range: entry 25% cover 50%;
+}
+
+@keyframes animate-in {
+  0% { opacity: 0; transform: translateY(100%); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes animate-out {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-100%); }
+}
+
+#list-view div {
+  animation: animate-in linear forwards,
+             animate-out linear forwards;
+  animation-timeline: view();
+  animation-range: entry, exit;
+}
+</style>
 <body class="container">
     <section>
         <div class="px-4 text-center">
